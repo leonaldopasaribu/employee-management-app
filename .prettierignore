@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+.angular
+dist
+
+# build outputs
+build
+.dist
+*.local
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+.idea
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# misc
+.DS_Store
+coverage
+*.log*
+
+# lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Angular cache
+.angular/cache
