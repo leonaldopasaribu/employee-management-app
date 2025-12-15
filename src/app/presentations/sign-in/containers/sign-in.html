@@ -1,0 +1,101 @@
+<div
+  class="bg-surface-50 dark:bg-surface-950 flex min-h-screen min-w-screen items-center justify-center overflow-hidden"
+>
+  <div class="flex flex-col items-center justify-center">
+    <div>
+      <div
+        class="bg-surface-0 dark:bg-surface-900 w-full px-8 py-20 sm:px-20"
+        style="border-radius: 53px"
+      >
+        <div class="mb-8 text-center">
+          <div
+            class="text-surface-900 dark:text-surface-0 mb-4 text-3xl font-medium"
+          >
+            Welcome to Employee Management
+          </div>
+          <span class="text-muted-color font-medium">Sign in to continue</span>
+        </div>
+
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+          <div class="mb-6">
+            <label
+              for="txt-email"
+              class="text-surface-900 dark:text-surface-0 mb-2 block text-xl font-medium"
+            >
+              Email
+            </label>
+            <input
+              pInputText
+              id="txt-email"
+              data-testid="email-field"
+              type="text"
+              placeholder="Email address"
+              class="w-full md:w-120"
+              formControlName="email"
+              [class.ng-invalid]="isFieldInvalid('email')"
+              [class.ng-dirty]="isFieldInvalid('email')"
+            />
+            @if (isFieldInvalid('email')) {
+              <small class="mt-1 block text-red-500">
+                {{ getFieldError('email') }}
+              </small>
+            }
+          </div>
+
+          <div class="mb-6">
+            <label
+              for="txt-password"
+              class="text-surface-900 dark:text-surface-0 mb-2 block text-xl font-medium"
+            >
+              Password
+            </label>
+            <p-password
+              id="txt-password"
+              data-testid="password-field"
+              formControlName="password"
+              placeholder="Password"
+              [toggleMask]="true"
+              [fluid]="true"
+              [feedback]="false"
+              [class.ng-invalid]="isFieldInvalid('password')"
+              [class.ng-dirty]="isFieldInvalid('password')"
+            ></p-password>
+            @if (isFieldInvalid('password')) {
+              <small class="mt-1 block text-red-500">
+                {{ getFieldError('password') }}
+              </small>
+            }
+          </div>
+
+          <div class="mt-2 mb-6 flex items-center justify-between gap-8">
+            <div class="flex items-center">
+              <p-checkbox
+                [formControl]="signInForm.controls.rememberMe"
+                id="chk-rememberme"
+                data-testid="rememberme-checkbox"
+                binary
+                class="mr-2"
+              ></p-checkbox>
+              <label for="chk-rememberme">Remember me</label>
+            </div>
+          </div>
+
+          @if (isError) {
+            <div
+              class="mb-4 rounded bg-red-100 p-3 text-red-700 dark:bg-red-900 dark:text-red-200"
+            >
+              {{ errorMessage }}
+            </div>
+          }
+
+          <p-button
+            type="submit"
+            label="Sign In"
+            styleClass="w-full"
+            [loading]="isLoading"
+          ></p-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
