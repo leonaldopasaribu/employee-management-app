@@ -88,7 +88,7 @@ pnpm test
 ## 📝 Development
 
 The application uses:
-- **Clean Architecture** - Separation of concerns with entities, repositories, and use cases
+- **Clean Architecture** - Separation of concerns with entities, repositories, and use cases (Reference https://medium.com/@leonaldopasaribu/front-end-architecture-with-angular-74ffa922ca8f)
 - **MVVM Pattern** - View Models for presentation logic
 - **Signal Store** - State management with Angular signals
 - **TypeScript** - Full type safety across the codebase
