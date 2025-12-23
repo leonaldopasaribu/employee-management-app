@@ -32,7 +32,7 @@ Employee Detail page
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Angular 20](https://angular.dev/) - Modern web framework
+- **Framework:** [Angular 21](https://angular.dev/) - Modern web framework
 - **Language:** [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
 - **UI Library:** [PrimeNG](https://primeng.org/) - Rich UI components for Angular
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) + SCSS - Modern styling approach
