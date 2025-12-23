@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { DASHBOARD_ROUTE_URL } from '../../shared/constants/route-url.constant';
@@ -8,7 +8,7 @@ import { AppMenuitem } from '../app-menuitem';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule, AppMenuitem, RouterModule],
+  imports: [AppMenuitem, RouterModule],
   templateUrl: './app-menu.html',
 })
 export class AppMenu {
